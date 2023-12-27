@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <button onclick="ObjAlert()"> alertButton</button><br/><br/>
+  <button onclick="ObjConfirm()"> confirmButton</button><br/><br/>
+  <button onclick=" ObjPrompt()"> promptButton</button><br/><br/>
+  <button onclick="ObjOpen()">openButton</button><br/><br/>
+  <button onclick="ObjClose()">closeButton</button><br/><br/>
+  <button onclick="SetTimoutFun()">timeoutButton</button><br/><br/>
+  <script>
+    function ObjAlert(){
+      alert("Save Succes");
+    }
+
+    function ObjConfirm(){
+      let result = confirm("Do You want to delete?");
+      document.write(result);
+    }
+
+    function ObjPrompt(){
+      let Name = prompt("Write Your Name");
+      document.write(Name);
+    }
+    function ObjPrompt(){
+      let Name = prompt("Write Your Name");
+      document.write(Name);
+    }
+    function ObjOpen(){
+       open();
+    }
+    function ObjClose(){
+       close();
+    }
+    function SetTimoutFun(){
+        setTimeout(function(){
+        alert("Hi i am 5 second late");
+      },5000);
+    }
+    
+
+
+   
+  </script>
+</body>
+</html>
