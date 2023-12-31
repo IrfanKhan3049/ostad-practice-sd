@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>1</p>
+  <p>2</p>
+  <p>3</p>
+  <p>4</p>
+  <p>5</p>
+  <button onclick="infoCookie()">click me for cookie</button><br><br>
+  <button onclick="infoDomain()">click me for domain</button><br><br>
+  <button onclick="infoLastModified()">click me for LastModified</button><br><br>
+  <button onclick="infoTitle()">click me for Title</button><br><br>
+  <button onclick="infoUrl()">click me for Url</button><br><br>
+  <button onclick="infoReplace()">click me for Replace</button><br><br>
+  <button onclick="infoNewWindow()">click me for new window</button><br><br>
+  <button onclick="ItemCount()">click me for p numbers</button><br><br>
+
+
+   <!-- ------------------ finding dom ----------------  -->
+<!-- 
+   <h1 class ="MyClass"> </h1>
+   <h2 class ="MyClass"> </h2>
+   <h3 class ="MyClass"> </h3>
+   <h4 class ="MyClass"> </h4>
+   <p>p1</p>
+   <p>2</p>
+   <p>3</p>
+   <p>4</p> -->
+    <script>
+    //  var a = document.getElementsByClassName("MyClass");
+    //  a[0].innerHTML = "hhjsahsdahkaskk";
+    //  a[1].innerHTML = "hhjsahsdahkaskk";
+    //  a[2].innerHTML = "hhjsahsdahkaskk";
+    //  a[3].innerHTML = "hhjsahsdahkaskk";
+    //  var b = document.getElementsByTagName('p');
+    //  b[0].innerHTML = "p1 manupolated";
+
+    function infoCookie(){
+    let info = document.cookie ;
+    document.getElementsByTagName("p")[0].innerHTML = info;
+    
+   }
+   function infoDomain(){
+    let info = document.domain ;
+    document.getElementsByTagName("p")[0].innerHTML = info;
+    
+   }
+   function infoLastModified(){
+    let info = document.lastModified ;
+    document.getElementsByTagName("p")[0].innerHTML = info;
+    
+   }
+   function infoTitle(){
+    let info = document.title ;
+    document.getElementsByTagName("p")[0].innerHTML = info;
+    
+   }
+   function infoUrl(){
+    let info = document.URL ;
+    document.getElementsByTagName("p")[0].innerHTML = info;
+    
+   }
+   function infoReplace(){
+    
+    document.open('text/html','replace');
+    document.write("<h2>Hi, My Name is Irfan</h2>");
+    document.close();
+    
+   }
+
+   function infoNewWindow(){
+    let w = window.open();
+    w.document.open();
+    w.document.write("<h2>Hi, My Name is Irfan</h2>");
+    w.document.close();
+   }
+   function ItemCount(){
+    let MyItems = document.getElementsByTagName('p');
+    let ItemCount = MyItems.length;
+    alert(ItemCount);
+   }
+
+    </script>
+</body>
+</html>
